@@ -73,7 +73,7 @@ public class TestBase extends AbstractTestNGCucumberTests
 		else if (browserName.equalsIgnoreCase("safari")) {
 			driver = new SafariDriver(); 
 		}
-		
+		//Headless Browser
 		else if (browserName.equalsIgnoreCase("Headless")) {
 			DesiredCapabilities caps = new DesiredCapabilities();
 			caps.setJavascriptEnabled(true);
