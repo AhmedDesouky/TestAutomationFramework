@@ -11,8 +11,8 @@ public class ContactUsTest extends TestBase
 	HomePage home;
 	ContactUsPage contactPage;
 
-	String email = "test@test.com";
-	String fullName = "Test User";
+	String email = "XYZ@XYZ.com";
+	String fullName = "Test User XYZ";
 	String enquiry = "Hello Admin , this is for test";
 
 	@Test
