@@ -15,12 +15,13 @@ public class UserRegisteration extends TestBase {
 
 	HomePage homeObject;
 	UserRegistrationPage registerObject;
-	/*
-	 * Faker fakeData = new Faker(); String firstname = fakeData.name().firstName();
-	 * String lastname = fakeData.name().lastName(); String email =
-	 * fakeData.internet().emailAddress(); String password =
-	 * fakeData.number().digits(8).toString();
-	 */
+	
+	  Faker fakeData = new Faker();
+	  String firstname = fakeData.name().firstName();
+	  String lastname = fakeData.name().lastName();
+	  String email = fakeData.internet().emailAddress();
+	  String password = fakeData.number().digits(8).toString();
+	 
 
 	@Given("^the user going to home page$")
 	public void the_user_going_to_home_page() throws Throwable {
@@ -42,7 +43,7 @@ public class UserRegisteration extends TestBase {
 	 */
 
 
-	@When("^enter the user data \"([^\"]*)\" , \"([^\"]*)\" , \"([^\"]*)\" , \"([^\"]*)\"$")
+	@When("^enter the user data$")
 	public void enter_the_user_data(String firstName, String lastName, String email, String password) {
 		registerObject = new UserRegistrationPage(driver);
 		registerObject.userRegistration(firstName, lastName, email, password);

@@ -33,13 +33,12 @@ public class UserRegistrationTestWithJavaFaker extends TestBase
 		Assert.assertTrue(registerObject.successMessage.getText().contains("Your registration completed"));
 	}
 
-	@Test(dependsOnMethods= {"UserCanRegisterSuccssfully"})
-	public void RegisteredUserCanLogout() 
-	{
-		registerObject.userLogout();
-	}
+	/*
+	 * @Test(dependsOnMethods= {"UserCanRegisterSuccssfully"}) public void
+	 * RegisteredUserCanLogout() { registerObject.userLogout(); }
+	 */
 
-	@Test(dependsOnMethods= {"RegisteredUserCanLogout"})
+	@Test(dependsOnMethods= {"UserCanRegisterSuccssfully"})
 	public void RegisteredUserCanLogin() 
 	{
 		homeObject.openLoginPage();
